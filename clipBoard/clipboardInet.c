@@ -5,6 +5,7 @@
 
 
 int main() {
+
     if (!OpenClipboard(NULL)) {
         return 1;
     }
@@ -21,7 +22,7 @@ int main() {
     {
     case 6:
         printf("Opening url\n");
-        ShellExecute(NULL, NULL, "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", msg, NULL, SW_HIDE);
+        ShellExecute(NULL, NULL, "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", data, NULL, SW_HIDE);
         break;
         
     case 7:
