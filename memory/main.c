@@ -15,10 +15,14 @@ int math(int x, int op, int y){
 }
 
 int main(int argc, char* argv[]){
-    // printf("Argc = %i\n", argc);
-    if (argc != 4) {
-        printf("Enter An Math Equation Ex: 1+4");
-        return -1;
+    printf("Argc = %i\n", argc);
+    // if (argc != 4) {
+    //     printf("Enter An Math Equation Ex: 1 + 4");
+    //     return -1;
+    // }
+
+    for (int i = 0; i < sizeof(argv[i]); i++){
+        printf("%i\n", *argv[i]);
     }
     int i;
 
