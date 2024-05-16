@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int math(int x, int op, int y){
     switch (op) {
@@ -11,33 +12,35 @@ int math(int x, int op, int y){
         return(x - y);
     case 47: 
         return(x / y);
+    default:
+        return 0;
     }
 }
 
 int main(int argc, char* argv[]){
+    int  i, ii;
+    int x = 0;
+    int y = 0;
     printf("Argc = %i\n", argc);
-    // if (argc != 4) {
-    //     printf("Enter An Math Equation Ex: 1 + 4");
-    //     return -1;
-    // }
 
-    for (int i = 0; i < sizeof(argv[i]); i++){
-        printf("%i\n", *argv[i]);
+    if (argc != 4) {
+        printf("Enter An Math Equation Ex: 1 + 4 \n");
+        return -1;
     }
-    int i;
+    int lenX = strlen(argv[1]);
+    int lenY = strlen(argv[3]);
 
-    int x = *argv[1] - '0';
-    // printf("%d\n", x);
+	for(i=0; i<lenX; i++){
+		x = x * 10 + ( (int)argv[i] - '0' );
+	}
 
-    int op = (int)*argv[2]; 
-    // printf("%d\n", op);
+	for(ii=0; ii<lenY; ii++){
+		y = y * 10 + ( (int)argv[ii] - '0' );
+	}
 
-    int y = *argv[3] - '0';
-    // printf("%d\n", y);
-
-    // printf("The ASCII value of %c is %d \n", *argv[1], *argv[1]);
-
-    printf("%i\n",math(x,op,y));
+    printf("%i\n", x);
+    printf("%i\n", y);
+    // printf("%i\n",math(x,op,y));
 
     // int *cool = (int*)malloc(sizeof(int));
 
