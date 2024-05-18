@@ -1,46 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 int math(int x, int op, int y){
     switch (op) {
-    case 42: 
+    case 42: //*
         return(x * y);
-    case 43: 
+    case 43: //+
         return(x + y);
-    case 45: 
+    case 45: //-
         return(x - y);
-    case 47: 
+    case 47:  // /
         return(x / y);
-    default:
+    case 60: //<
+        if (x < y){
+            return true;
+        } else {
+            return false;}        
+    case 61: //=
+        if (x == y){
+            return true;
+        } else {
+            return false;}         return 0;
+    case 62: // >
         return 0;
+    default:
+        puts("Enter valid expression, (* / - + = > <)");
+        exit(-1);
     }
 }
 
 int main(int argc, char* argv[]){
+    if (argc != 4) {
+    printf("Enter An Math Equation Ex: 1 + 4 \n");
+    return -1;}
+
     int  i, ii;
     int x = 0;
     int y = 0;
-    printf("Argc = %i\n", argc);
+    char op = *argv[2];
+    // printf("Argc = %i\n", argc);
 
-    if (argc != 4) {
-        printf("Enter An Math Equation Ex: 1 + 4 \n");
-        return -1;
-    }
-    int lenX = strlen(argv[1]);
-    int lenY = strlen(argv[3]);
+    x = atoi(argv[1]);
+    y = atoi(argv[3]);
 
-	for(i=0; i<lenX; i++){
-		x = x * 10 + ( (int)argv[i] - '0' );
-	}
+    // printf("%i\n", x);
+    // printf("%i\n", y);
 
-	for(ii=0; ii<lenY; ii++){
-		y = y * 10 + ( (int)argv[ii] - '0' );
-	}
-
-    printf("%i\n", x);
-    printf("%i\n", y);
-    // printf("%i\n",math(x,op,y));
+    printf("%i\n",math(x,op,y));
 
     // int *cool = (int*)malloc(sizeof(int));
 
