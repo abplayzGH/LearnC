@@ -22,9 +22,14 @@ int math(int x, int op, int y){
         if (x == y){
             return true;
         } else {
-            return false;}         return 0;
+            return false;
+        }
     case 62: // >
-        return 0;
+        if ( x > y){
+            return true;
+        } else {
+            return false;
+        }
     default:
         puts("Enter valid expression, (* / - + = > <)");
         exit(-1);
