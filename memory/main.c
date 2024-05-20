@@ -27,8 +27,9 @@ int math(int x, int op, int y){
 
 int main(int argc, char* argv[]){
     if (argc != 4) {
-    printf("Enter An Math Equation Ex: 1 + 4 \n");
-    return -1;}
+        printf("Enter An Math Equation Ex: 1 + 4 \n");
+        return -1;
+    }
 
     int  i, ii;
     int x = 0;
