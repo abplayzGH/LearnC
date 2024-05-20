@@ -12,26 +12,15 @@ int math(int x, int op, int y){
     case 45: //-
         return(x - y);
     case 47:  // /
-        return(x / y);
-    case 60: //<
-        if (x < y){
-            return true;
-        } else {
-            return false;}        
+        return(x / y);    
     case 61: //=
         if (x == y){
             return true;
         } else {
             return false;
         }
-    case 62: // >
-        if ( x > y){
-            return true;
-        } else {
-            return false;
-        }
     default:
-        puts("Enter valid expression, (* / - + = > <)");
+        puts("Enter valid expression, (* / - + = )");
         exit(-1);
     }
 }
