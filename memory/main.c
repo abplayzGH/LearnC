@@ -31,7 +31,6 @@ int main(int argc, char* argv[]){
         return -1;
     }
 
-    int  i, ii;
     int x = 0;
     int y = 0;
     char op = *argv[2];
