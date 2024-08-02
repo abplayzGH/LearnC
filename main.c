@@ -6,12 +6,14 @@ int main() {
     srand(time(NULL)); 
 
     int i = 1;
+    for (int j = 0; j < 10; j++){
+        while (i < 40) {
 
-    while (i < 20) {
-
-        char c = rand() % 127;
-        printf("%c\n",c);
-        i++;
+            char c = rand() % 127;
+            printf("%c",c);
+            i++;
+        }
+        // printf("\n");
     }
     return 0;   
 }
