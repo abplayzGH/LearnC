@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
         node *n = malloc(sizeof(node));
         if(n == NULL){return 0;}
 
-        n->number =number;
+        n->number = number;
         n->next = list;
         
         if (list = NULL){
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
                     ptr->next = n;
                     break;
                 }
-                
+
             }
         }
 
