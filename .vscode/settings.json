@@ -59,6 +59,7 @@
   "files.associations": {
     "time.h": "c",
     "stdlib.h": "c",
-    "limits": "c"
+    "limits": "c",
+    "iostream": "cpp"
   }
 }
